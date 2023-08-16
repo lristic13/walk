@@ -5,6 +5,7 @@ import 'package:walk/widgets/app_rotated_paw.dart';
 
 import '../../constants/app_colors.dart';
 import '../register_page/register_page.dart';
+import '../your_dogs/your_dogs_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -121,6 +122,30 @@ class HomePage extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: AppColors.yellow,
+                          fontSize: 32,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const YourDogsPage())),
+                  child: Container(
+                    width: double.infinity,
+                    height: MediaQuery.sizeOf(context).height * 0.1,
+                    decoration: ShapeDecoration(
+                      color: AppColors.yellow,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Guest',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: AppColors.black,
                           fontSize: 32,
                         ),
                       ),
